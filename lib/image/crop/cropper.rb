@@ -1,6 +1,6 @@
 module Image
   module Crop
-    class Cropper < Thumbnail
+    class Cropper < Paperclip::Thumbnail
       def transformation_command
         if crop_command
           crop_command + super.sub(/ -crop \S+/, '')
