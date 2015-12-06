@@ -1,4 +1,5 @@
-require "image/crop/version"
+require 'image/crop/version'
+require 'image/crop/is_image_croppable'
 
 module Image
   module Crop
