@@ -1,3 +1,4 @@
+require 'image/crop/engine'
 require 'image/crop/version'
 require 'image/crop/is_image_croppable'
 require 'image/crop/cropper'
