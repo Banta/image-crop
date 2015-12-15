@@ -1,10 +1,11 @@
 require 'image/crop/engine'
 require 'image/crop/version'
-require 'image/crop/is_image_croppable'
-require 'paperclip_processors/cropper'
 
 module Image
   module Crop
-    # Your code goes here...
+    # Load configuration from initializer
+    def self.setup
+      yield self
+    end
   end
 end
