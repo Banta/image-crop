@@ -1,4 +1,5 @@
 require 'image/crop/engine'
+require 'image/crop/is_image_cropped'
 require 'image/crop/version'
 
 module Image
