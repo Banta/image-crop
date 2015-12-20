@@ -62,9 +62,9 @@
     });
     $imagesContainer = div().append(div().addClass('modal-dialog').append(div().addClass('modal-content')
         .append(div().addClass('modal-body').append(div()
-            .addClass('row').append($sourceIm))
-            .append('<br /> <b>Preview</b><br />')
-            .append(div().addClass('row').append($cropSandbox))
+            .addClass('row'))
+            .append(div().addClass('col-md-6').append($sourceIm))
+            .append(div().addClass('col-md-6').append('<br /> <b>Preview</b><br />').append($cropSandbox))
             .append(div().addClass('clearfix')),
         div().addClass('modal-footer')
             .append(div().addClass('btn-group')
@@ -100,7 +100,8 @@
       tempImage.onload = function() {
         return img.attr({
           'data-original-width': tempImage.width,
-          'data-original-height': tempImage.height
+          'data-original-height': tempImage.height,
+          style: 'max-width: 600px; max-height: 400px;'
         });
       };
       return tempImage.src = img.attr('src');
@@ -256,6 +257,7 @@
 
   $.fn.extend({
     awesomeCropper: function(options) {
+      $(this).attr('type','hidden')
       return this.each(function() {
         if ($(this).data("awesomeCropper")) {
           if (options.remove) {
